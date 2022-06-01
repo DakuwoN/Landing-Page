@@ -40,8 +40,18 @@
 
 // build the nav
 
+const navElement = document.createElement("li");
+const node = document.innerHTML("Link 1");
+navElement.appendChild(node);
+
+const navBar = document.querySelector("#navbar__list");
+navBar.appendChild(navElement);
+
+
 
 // Add class 'active' to section when near top of viewport
+
+
 
 
 // Scroll to anchor ID using scrollTO event
