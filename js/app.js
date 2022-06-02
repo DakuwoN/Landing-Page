@@ -39,13 +39,15 @@
 */
 
 // build the nav
+// Add Style to the links in navbar
+const navBar = document.querySelector('#navbar__list');
+const liTag = document.createElement('li');
+liTag.textContent = 'Link 1';
+navBar.appendChild(liTag);
 
-const navElement = document.createElement("li");
-const node = document.innerHTML("Link 1");
-navElement.appendChild(node);
+const htmlTextToAdd = '<li>Link 2</li>';
+navBar.insertAdjacentHTML('beforeend', htmlTextToAdd);
 
-const navBar = document.querySelector("#navbar__list");
-navBar.appendChild(navElement);
 
 
 
