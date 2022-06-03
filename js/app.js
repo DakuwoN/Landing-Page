@@ -39,15 +39,28 @@
 */
 
 // build the nav
-// Add Style to the links in navbar
+
 const navBar = document.querySelector('#navbar__list');
 const liTag = document.createElement('li');
-liTag.textContent = 'About';
-navBar.appendChild(liTag);
+const liTag2 = document.createElement('li');
+liTag.innerText = 'Section 2';
+liTag2.innerText = 'Section 3';
 
-const htmlTextToAdd = '<li>Home</li>';
-navBar.insertAdjacentHTML('beforeend', htmlTextToAdd);
-navBar.style.backgroundColor = 'blue';
+const ulStyling = {
+    color: "black",
+    padding: "20px 80px",
+    display: "flex",
+    "justify-content": "flex-end",
+    gap: "30px",
+}
+
+Object.assign(navBar.style, ulStyling)
+
+navBar.innerHTML = "<li> Section 1 </li>"
+navBar.append(liTag);
+navBar.appendChild(liTag2);
+
+
 
 
 
