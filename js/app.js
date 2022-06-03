@@ -62,15 +62,29 @@ navBar.appendChild(liTag2);
 
 
 
-
-
-
 // Add class 'active' to section when near top of viewport
 
 
 
 
 // Scroll to anchor ID using scrollTO event
+const navLinks = document.querySelectorAll("li");
+const section1 = document.getElementById("section1");
+const section2 = document.getElementById("section2");
+const section3 = document.getElementById("section3");
+
+navLinks[0].onclick = () => {
+    section1.scrollIntoView({ behavior: "smooth", block: "center" })
+}
+
+navLinks[1].onclick = () => {
+    section2.scrollIntoView({ behavior: "smooth", block: "center" })
+}
+
+navLinks[2].onclick = () => {
+    section3.scrollIntoView({ behavior: "smooth", block: "center" })
+}
+
 
 
 /**
