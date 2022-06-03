@@ -42,11 +42,12 @@
 // Add Style to the links in navbar
 const navBar = document.querySelector('#navbar__list');
 const liTag = document.createElement('li');
-liTag.textContent = 'Link 1';
+liTag.textContent = 'About';
 navBar.appendChild(liTag);
 
-const htmlTextToAdd = '<li>Link 2</li>';
+const htmlTextToAdd = '<li>Home</li>';
 navBar.insertAdjacentHTML('beforeend', htmlTextToAdd);
+navBar.style.backgroundColor = 'blue';
 
 
 
