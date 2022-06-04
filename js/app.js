@@ -70,9 +70,10 @@ navBar.appendChild(liTag3);
 let windowScrollY = window.scrollY
 
 window.addEventListener("scroll", () => {
-    const sec1Height = section1.getBoundingClientRect()
-    const sec2Height = section2.getBoundingClientRect()
-    const sec3Height = section3.getBoundingClientRect()
+    const sec1Height = section1.getBoundingClientRect();
+    const sec2Height = section2.getBoundingClientRect();
+    const sec3Height = section3.getBoundingClientRect();
+    const sec4Height = section4.getBoundingClientRect();
 
     windowScrollY = window.scrollY
 
@@ -82,18 +83,29 @@ window.addEventListener("scroll", () => {
         section1.classList.add("your-active-class")
         section2.classList.remove("your-active-class")
         section3.classList.remove("your-active-class")
+        section4.classList.remove("your-active-class")
     }
 
     if (windowScrollY > sec2Height.top + 200) {
         section2.classList.add("your-active-class")
         section1.classList.remove("your-active-class")
         section3.classList.remove("your-active-class")
+        section4.classList.remove("your-active-class")
     }
 
     if (windowScrollY > sec3Height.top + 400) {
         section3.classList.add("your-active-class")
         section2.classList.remove("your-active-class")
         section1.classList.remove("your-active-class")
+        section4.classList.remove("your-active-class")
+    }
+
+    if (windowScrollY > sec4Height.top + 600) {
+        section4.classList.add("your-active-class")
+        section3.classList.remove("your-active-class")
+        section2.classList.remove("your-active-class")
+        section1.classList.remove("your-active-class")
+
     }
 })
 
@@ -104,6 +116,7 @@ const navLinks = document.querySelectorAll("li");
 const section1 = document.getElementById("section1");
 const section2 = document.getElementById("section2");
 const section3 = document.getElementById("section3");
+const section4 = document.getElementById("section4");
 
 navLinks[0].onclick = () => {
     section1.scrollIntoView({ behavior: "smooth", block: "center" })
@@ -115,6 +128,10 @@ navLinks[1].onclick = () => {
 
 navLinks[2].onclick = () => {
     section3.scrollIntoView({ behavior: "smooth", block: "center" })
+}
+
+navLinks[3].onclick = () => {
+    section4.scrollIntoView({ behavior: "smooth", block: "center" })
 }
 
 
