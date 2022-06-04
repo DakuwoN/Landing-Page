@@ -43,8 +43,10 @@
 const navBar = document.querySelector('#navbar__list');
 const liTag = document.createElement('li');
 const liTag2 = document.createElement('li');
+const liTag3 = document.createElement('li');
 liTag.innerText = 'Section 2';
 liTag2.innerText = 'Section 3';
+liTag3.innerText = 'Section 4';
 
 const ulStyling = {
     color: "black",
@@ -59,11 +61,41 @@ Object.assign(navBar.style, ulStyling)
 navBar.innerHTML = "<li> Section 1 </li>"
 navBar.append(liTag);
 navBar.appendChild(liTag2);
+navBar.appendChild(liTag3);
 
 
 
 // Add class 'active' to section when near top of viewport
 
+let windowScrollY = window.scrollY
+
+window.addEventListener("scroll", () => {
+    const sec1Height = section1.getBoundingClientRect()
+    const sec2Height = section2.getBoundingClientRect()
+    const sec3Height = section3.getBoundingClientRect()
+
+    windowScrollY = window.scrollY
+
+    // console.log(sec1Height)
+
+    if (windowScrollY > sec1Height.top) {
+        section1.classList.add("your-active-class")
+        section2.classList.remove("your-active-class")
+        section3.classList.remove("your-active-class")
+    }
+
+    if (windowScrollY > sec2Height.top + 200) {
+        section2.classList.add("your-active-class")
+        section1.classList.remove("your-active-class")
+        section3.classList.remove("your-active-class")
+    }
+
+    if (windowScrollY > sec3Height.top + 400) {
+        section3.classList.add("your-active-class")
+        section2.classList.remove("your-active-class")
+        section1.classList.remove("your-active-class")
+    }
+})
 
 
 
