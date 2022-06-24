@@ -70,6 +70,13 @@ section {
     text-align: right;
 }
 
+li.active {
+    color: white;
+    cursor: pointer;
+    background-color: #000;
+
+}
+
 .navbar__menu li {
     display: inline-block;
 }
