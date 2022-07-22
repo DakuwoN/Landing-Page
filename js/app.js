@@ -100,7 +100,7 @@ navLinks[3].onclick = () => {
 
 
 navLinks.forEach(link => {
-    link.onmouseover = () => {
+    link.click = () => {
         link.classList.add("active")
     }
 
