@@ -1,7 +1,6 @@
 ## Overview
 Landing Page Project @ Udacity (OneTen Scholarship)
 
-You'll need to convert this project from a static project to an interactive one.
 
 
 ## Table of contents
