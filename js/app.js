@@ -1,6 +1,4 @@
 
-
-
 const navBar = document.querySelector('#navbar__list');
 const pageSections = document.getElementsByTagName("section");
 let sectionTops = [];
@@ -56,4 +54,3 @@ function scrollTracking() {
 }
 
 window.addEventListener("scroll", scrollTracking)
-
