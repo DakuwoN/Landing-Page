@@ -34,7 +34,7 @@ JavaScript is really cool, I would like to experience more with JavaScript in th
 
 - Website - [Matthew McCane](https://matthewmccane.blogspot.com)
 - LinkedIn - [Matthew McCane](https://www.linkedin.com/in/matthewmccane/)
-- Twitter - [@McCane_Matthew](https://www.twitter.com/mccane_matthew)
+- Twitter - [@McCane_Matthew](https://www.twitter.com/itsMattMcCane)
 
 
 
